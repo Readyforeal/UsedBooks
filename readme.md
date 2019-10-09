@@ -3,15 +3,15 @@
 
 ## What you need to test.
 
-Pre-requisets: Your computer will need to have the following installed for Windows.
+Pre-requisets: Your Windows machine will need to have the following installed.
 - PHP V7.3.9 <a href="https://windows.php.net/downloads/releases/php-7.3.10-Win32-VC15-x64.zip">Download here</a>
 - Composer <a href="https://getcomposer.org/Composer-Setup.exe">Download here</a>
 
-To run this project, do the following:
-- Download this repository and save to an easy destination to access via Command Prompt.
-- Open Command Prompt and run the command "CD DESTINATION/SUBFOLDER/SUBFOLDER/etc..." to enter the project folder titled Used Books.
+To run this project, you need to:
+- Download this repository and extract to desired location.
+- Open Command Prompt and CD into the project folder.
 - Run command "php artisan serve" to start the local server.
-- Go to address provided. (Should look like http://127.0.0.1:8000)
+- Go to the address provided. (Should look like http://127.0.0.1:8000)
 
 ## Created using Laravel Framework
 
