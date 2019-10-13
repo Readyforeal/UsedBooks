@@ -17,9 +17,18 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('title');
+            $table->string('edition')->nullable();
+            $table->string('author');
+            $table->string('publisher')->nullable();
+            $table->string('publication-year')->nullable();
+            $table->string('format')->nullable();
             $table->text('description');
+            $table->string('isbn10');
+            $table->string('isbn13');
+            $table->string('language')->nullable();
+            $table->decimal('price', 4, 2);
             $table->string('image');
-            $table->decimal('price, 4, 2');
+            $table->string('image2');
 
             $table->timestamps();
 

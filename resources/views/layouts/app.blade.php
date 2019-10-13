@@ -21,10 +21,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md fixed-top navbar-light" style="background-color: #FFF;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Used Books
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
+                    <div><img src="/svg/logo.svg" style="height: 60px;"></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,11 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                    <a href="/p/create" class="nav-link pr-5">+ Post</a>
+
+                    <a href="/p/create" class="nav-link pr-5">Messages</a>
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -49,7 +54,10 @@
                                 </li>
                             @endif
                         @else
+
                             <li class="nav-item dropdown">
+
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
@@ -61,6 +69,10 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="/profile/{{ auth()->user()->id}}">
+                                        Profile
+                                    </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -69,6 +81,39 @@
                         @endguest
                     </ul>
                 </div>
+            </div>
+        </nav>
+
+        <div style="height: 150px; background-color: #FFF;">
+            <div class="container">
+                <form class="form-flex" style="padding-top: 100px;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label style="border: none;" class="input-group-text bg-white border-bottom" id="basic-addon2"><img src="/svg/search.svg" width="20px"></label>
+                    </div>
+                    <input style="border: none;" type="text" class="form-control border-bottom" aria-label="Recipient's username" aria-describedby="button-addon2">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <nav class="navbar d-block d-md-none fixed-bottom navbar-light bg-light">
+            <div class="container text-center d-flex">
+                <a class="col-3 w-100" href="/home">
+                    <div>
+                        <img class="w-50" src="/svg/glyphicon-01.svg">
+                    </div>
+                </a>
+                <a class="col-3 w-100" href="/p/create">
+                    <div>
+                        <img class="w-75" src="/svg/glyphicon-02.svg">
+                    </div>
+                </a>
+                <a class="col-3 w-100" href="#">
+                    <div>
+                        <img class="w-50" src="/svg/glyphicon-03.svg">
+                    </div>
+                </a>
             </div>
         </nav>
 
