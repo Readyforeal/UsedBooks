@@ -1,13 +1,19 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h1 align="center">Used Books</h1>
+<p align="center">Name is a placeholder</p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## What you need to test.
 
-## About Laravel
+Pre-requisets: Your Windows machine will need to have the following installed.
+- PHP V7.3.9 <a href="https://windows.php.net/downloads/releases/php-7.3.10-Win32-VC15-x64.zip">Download here</a>
+- Composer <a href="https://getcomposer.org/Composer-Setup.exe">Download here</a>
+
+To run this project, you need to:
+- Download this repository and extract to desired location.
+- Open Command Prompt and CD into the project folder.
+- Run command "php artisan serve" to start the local server.
+- Go to the address provided. (Should look like http://127.0.0.1:8000)
+
+## Created using Laravel Framework
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
