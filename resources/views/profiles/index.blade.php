@@ -44,25 +44,33 @@
             <h1 class="pb-3">Library</h1>
         <div>
 
-        @foreach($user->posts as $post)
+        <div class="mt-5 d-flex flex-wrap justify-content-sm-center">
+            @foreach($user->posts as $post)
+            <div class="col-sm-5 col-lg-3" class="px-3">
 
-            <a style="text-decoration: none;" class="text-secondary" href="/p/{{ $post->id }}">
-            <div class=" m-2 p-0 rounded bg-white shadow-sm d-flex" style="max-height: 120px;">
-                <!--<a style="text-decoration: none;" class="text-secondary" href="/p/{{ $post->id }}">-->
-                    <div class="p-0 overflow-hidden" style="max-width: 120px">
-                        <img class=" p-2 rounded-left" src="/storage/{{ $post->image }}" style="max-height: 100%;">
+                    <div class="w-100 text-center">
+                        <a class="lead text-dark" href="/p/{{ $post->id }}"><img class="rounded" src="/storage/{{ $post->image }}" width="120"></a>
                     </div>
-                    
-                    <div class=" p-3">
-                        <h5 class="mb-0">{{ $post->title }}</h5>
-                        <h3>${{ $post->price }}</h3>
-                        <p class="mb-0"><small>Posted by {{ $post->user->username }} on {{ $post->created_at->format('d-m-Y') }}</small></p>
+
+                    <div class="p-3 mt-4 border-top">
+
+                        <a class="lead text-dark" href="/p/{{ $post->id }}">
+
+                        <?php
+                            $title = $post->title;
+                            $result = Str::limit($title, 50, '...');
+
+                            echo($result);
+                        ?>
+
+                        </a>
+
+                        <p class="text-muted pt-2">{{ $post->author }}</p>
+                        <p class="lead">${{ $post->price }}</p>
                     </div>
-                <!--</a>-->
             </div>
-            </a>
-
-        @endforeach
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection

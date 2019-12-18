@@ -22,8 +22,7 @@
         <div class="col-12">
 
             <div class="col-12 p-0 pb-3 d-flex justify-content-end">
-                <a href="#" class="btn btn-outline-dark pl-5 pr-5">Make Offer</a>
-                <a href="#" class="btn btn-outline-dark ml-3 pl-5 pr-5">Ask</a>
+                <a href="#" class="btn btn-outline-dark pl-5 pr-5">Add to cart</a>
             </div>
 
             <div class="d-flex align-items-baseline">

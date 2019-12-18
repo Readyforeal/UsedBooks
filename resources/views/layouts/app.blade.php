@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md fixed-top navbar-light" style="background-color: #FFF;">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/home') }}">
                     <div><img src="/svg/logo.svg" style="height: 60px;"></div>
@@ -39,9 +39,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                    <a href="/p/create" class="nav-link pr-5">+ Post</a>
+                    <a href="/p/create" class="nav-link pr-5">Create Post</a>
 
-                    <a href="/p/create" class="nav-link pr-5">Messages</a>
+                    <a href="/p/create" class="nav-link pr-5">Cart</a>
 
                         <!-- Authentication Links -->
                         @guest
@@ -83,19 +83,6 @@
                 </div>
             </div>
         </nav>
-
-        <div style="height: 150px; background-color: #FFF;">
-            <div class="container">
-                <form class="form-flex" style="padding-top: 100px;">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label style="border: none;" class="input-group-text bg-white border-bottom" id="basic-addon2"><img src="/svg/search.svg" width="20px"></label>
-                    </div>
-                    <input style="border: none;" type="text" class="form-control border-bottom" aria-label="Recipient's username" aria-describedby="button-addon2">
-                </div>
-                </form>
-            </div>
-        </div>
 
         <nav class="navbar d-block d-md-none fixed-bottom navbar-light bg-light">
             <div class="container text-center d-flex">

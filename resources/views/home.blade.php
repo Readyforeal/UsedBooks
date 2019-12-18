@@ -2,37 +2,45 @@
 
 @section('content')
 
-<div class="w-100 p-5 text-center text-white" style="margin-top: -25px; background-image: url('/images/hero.jpg'); background-size: cover;">
-    <img src="/svg/logo-white.svg" height="150px">
-    <h5>Your source to buy and sell used college textbooks</h5>
-</div>
+<div class="container text-dark">
 
-<div class="container text-secondary">
+    <div class="w-100 text-center text-white p-5" style="margin-top: -25px; background-image: url('/images/hero.jpg'); background-size: cover; background-position: middle;">
+        <img class="mt-5" src="/svg/logo-white.png" height="42px">
+        <p class="lead mb-5 pt-3">Your source to buy and sell used college textbooks</p>
+    </div>
 
-    <div class="row p-0 pt-5">
+    <div class="container p-5 bg-white">
 
-        <div class="col-12 p-0 flex">
+        <p class="lead pb-5">Latest additions</p>
 
+        <div class="d-flex flex-wrap justify-content-sm-center">
             @foreach($posts as $post)
+            <div class="col-sm-5 col-lg-3" class="px-3">
 
-            <a style="text-decoration: none;" class="text-secondary" href="/p/{{ $post->id }}">
-            <div class=" m-2 p-0 rounded bg-white shadow-sm d-flex" style="max-height: 120px;">
-                <!--<a style="text-decoration: none;" class="text-secondary" href="/p/{{ $post->id }}">-->
-                    <div class="p-0 overflow-hidden" style="max-width: 120px">
-                        <img class=" p-2 rounded-left" src="/storage/{{ $post->image }}" style="max-height: 100%;">
+                    <div class="w-100 text-center">
+                        <a class="lead text-dark" href="/p/{{ $post->id }}"><img class="rounded" src="/storage/{{ $post->image }}" width="120"></a>
                     </div>
-                    
-                    <div class=" p-3">
-                        <h5 class="mb-0">{{ $post->title }}</h5>
-                        <h3>${{ $post->price }}</h3>
-                        <p class="mb-0"><small>Posted by {{ $post->user->username }} on {{ $post->created_at->format('d-m-Y') }}</small></p>
+
+                    <div class="p-3 mt-4 border-top">
+
+                        <a class="lead text-dark" href="/p/{{ $post->id }}">
+
+                        <?php
+                            $title = $post->title;
+                            $result = Str::limit($title, 50, '...');
+
+                            echo($result);
+                        ?>
+
+                        </a>
+
+                        <p class="text-muted pt-2">{{ $post->author }}</p>
+                        <p class="lead">${{ $post->price }}</p>
                     </div>
-                <!--</a>-->
             </div>
-            </a>
-
             @endforeach
         </div>
     </div>
+
 </div>
 @endsection
